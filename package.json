@@ -1,6 +1,6 @@
 {
 	"name": "mongoose-updated",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Automatically change the date of the document when the document is changed",
 	"author": {
 		"name": "Zlatko Fedor",

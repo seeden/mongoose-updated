@@ -3,12 +3,15 @@
 module.exports = function updatedPlugin (schema, options) {
 	//prepare arguments
 	options = options || {};
-	var path = options.path || 'updated';
+	
+	var path = options.path || 'updated',
+		pathOptions = options.pathOptions || {};
 
-	schema.path(path, {
-		type: Date, 
-		default: Date.now
-	});
+	pathOptions.type = Date;
+	pathOptions.default = Date.now;
+
+
+	schema.path(path, pathOptions);
 
 	schema.pre('save', function (next) {
 		//I will replace this with $currentDate in the future
